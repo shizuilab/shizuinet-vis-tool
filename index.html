@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <title>Symbol Visualization Tool</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Symbol Visualization Tool</h1>
+
+
+      
+      <div class="mb-3">
+
+
+        <div class="input-group">
+
+          <span class="input-group-text">Address</span>
+          <input class="form-control" type="text" id="myAddress">
+          <button class="btn btn-secondary" onclick="searchClick();">search</button>
+        </div>
+      </div>
+      <div id="network"></div>
+      <p id="explorer"></p>
+      <p>Click on the address to see details</p>
+    </div>
+  
+<!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- symbol -->
+    <script type="text/javascript" src="https://xembook.github.io/nem2-browserify/symbol-sdk-pack-2.0.3.js"></script>
+
+<!-- vis -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+
+<!-- myscript -->
+    <script type="text/javascript" src="script.js"></script>    
+
+  </body>
+</html>

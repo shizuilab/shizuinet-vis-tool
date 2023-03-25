@@ -1,0 +1,25 @@
+input#tx {
+	border:10px;
+	border-radius:10px;
+	box-shadow: none;
+	padding: 2px 8px;
+}
+  
+input#keyword:focus {
+	outline: none;
+}
+
+#searchBox{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:rgb(213, 168, 255);
+	text-align: center;
+}
+
+#network {
+	width:  100%;
+	height: 800px;
+	border: 1px solid lightslategrey;
+	background-color: lightgray;
+}
