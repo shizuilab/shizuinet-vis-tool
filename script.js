@@ -19,7 +19,6 @@ async function makeGraph(_nodesArray,_edgesArray){
 
     //初期化処理
 
-
     let edgesArray =_edgesArray;
     let nodesArray =_nodesArray;
 
@@ -237,8 +236,6 @@ async function searchAddress(_RawAddress){
     }
     // console.log(nodesArray);
     console.table(nodesArray);
-
-    // console.log(nodesArray.id[RawAddress]);
 
 
     //edgesArray作成（TxDetailそのもの）
