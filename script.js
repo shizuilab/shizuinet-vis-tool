@@ -41,18 +41,18 @@ async function makeGraph(_nodesArray,_edgesArray){
         // physics: false, // 物理シミュレーション
         nodes: {
             shape: 'box', 
-            size: 60,
+            size: 30,
             font: {
                 color: 'black', 
             },
-            color: "9875ff"
+            color: "#9875ff"
         },
         edges: {
             arrows: 'to', 
             smooth: false
         },
         groups: {
-            myGroup: {color:{background:'9875ff'},borderWidth:3},
+            myGroup: {color:{background:'#ebeb4b'},borderWidth:3},
             otherGroup: {color:{background:'skyBlue'}, borderWidth:1}
         }
         // ,interaction:{hover:true}
