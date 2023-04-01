@@ -251,7 +251,7 @@ async function searchAddress(_RawAddress){
             console.log("test");
 
             GENERATION_HASH = '7FCCD304802016BEBBCD342A332F91FF1F3BB5E902988B352697BE245F48E836';
-            EPOCH = 1637848847;
+            //EPOCH = 1637848847;
             XYM_ID = '3A8416DB2D53B6C8';
             NODE_URL = 'https://sym-test-04.opening-line.jp:3001';
             NET_TYPE = sym.NetworkType.TEST_NET; 
