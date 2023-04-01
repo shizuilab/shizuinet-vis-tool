@@ -229,40 +229,35 @@ async function searchAddress(_RawAddress){
     nodesArray.splice(0);
     
     // console.log(RawAddress);
-	
+
     switch(RawAddress.substr(0,1)){
         case "N":
             console.log("main");
 
-            GENERATION_HASH = 'ED5761EA890A096C50D3F50B7C2F0CCB4B84AFC9EA870F381E84DDE36D04EF16';
-            //GENERATION_HASH = '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6';
-            //EPOCH = 1615853185;
-            //XYM_ID = '6BED913FA20223F8';
-            //NODE_URL = 'https://symbol-mikun.net:3001';
-            XYM_ID = '39E0C49FA322A459';
-            NODE_URL = 'http://dhealth.shizuilab.com:3000';
+            GENERATION_HASH = '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6';
+            EPOCH = 1615853185;
+            XYM_ID = '6BED913FA20223F8';
+            NODE_URL = 'https://symbol-mikun.net:3001';
             NET_TYPE = sym.NetworkType.MAIN_NET;
 
-            //document.getElementById('explorer').innerHTML= '<a href="https://symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
-            document.getElementById('explorer').innerHTML= '<a href="http://explorer.dhealth.cloud/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on dHealth Explorer</a>';
+            document.getElementById('explorer').innerHTML= '<a href="https://symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
             break;
 
         case "T":
             console.log("test");
 
             GENERATION_HASH = '7FCCD304802016BEBBCD342A332F91FF1F3BB5E902988B352697BE245F48E836';
-            //EPOCH = 1637848847;
+            EPOCH = 1637848847;
             XYM_ID = '3A8416DB2D53B6C8';
             NODE_URL = 'https://sym-test-04.opening-line.jp:3001';
             NET_TYPE = sym.NetworkType.TEST_NET; 
 
-            document.getElementById('explorer').innerHTML= '<a href="https://testnet.symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Testnet Explorer</a>';
+            document.getElementById('explorer').innerHTML= '<a href="https://testnet.symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
             break;
 
     }
 
     repo = new sym.RepositoryFactoryHttp(NODE_URL);
-    EPOCH = await repo.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
     accountRepo = repo.createAccountRepository();
     txRepo = repo.createTransactionRepository();
     
