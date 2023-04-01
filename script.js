@@ -11,14 +11,15 @@ let txRepo;
 let edgesArray = [];
 let nodesArray = [];
 
-
 //グラフ作成
-async function makeGraph(_nodesArray,_edgesArray){
+async function makeGraph(_nodesArray,_edgesArray,_RawAddress){
 
     //初期化処理
 
+
     let edgesArray =_edgesArray;
     let nodesArray =_nodesArray;
+    let RawAddress =_RawAddress;
 
     // console.log(edgesArray);
     // console.log(nodesArray);
@@ -67,7 +68,7 @@ async function makeGraph(_nodesArray,_edgesArray){
           var node = nodes.get(nodeId);
         //   console.log(node.label + 'is clicked');
         //   console.log(nodeId + 'is clicked');
-          nodeClick(nodeId);
+          nodeClick(nodeId,RawAddress);
         }
     });
     network.on("hover",function(params){
@@ -323,9 +324,7 @@ async function searchAddress(_RawAddress){
     // console.table(edgesArray);
 
     //グラフ作成
-    await makeGraph(nodesArray,edgesArray);
-
-
+    await makeGraph(nodesArray,edgesArray,RawAddress);
 
 }
 async function test(){
@@ -339,10 +338,13 @@ async function searchClick(){
     await searchAddress(element.value);
 }
 
-async function nodeClick(_node){
+async function nodeClick(_node,_RawAddress){
     let node = _node;
+    let RawAddress = _RawAddress;
     document.getElementById("myAddress").value = node;
-    console.log(node);
+    document.getElementById("fromAddress").innerText = "from address:[ " + RawAddress + " ]";
+
+    // console.log(node);
     document.getElementById('network').innerText="under investigation...";
     await searchAddress(node);
 }
