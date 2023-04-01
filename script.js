@@ -235,7 +235,7 @@ async function searchAddress(_RawAddress){
             console.log("main");
 
             GENERATION_HASH = '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6';
-            EPOCH = 1615853185;
+            //EPOCH = 1615853185;
             XYM_ID = '6BED913FA20223F8';
             NODE_URL = 'https://symbol-mikun.net:3001';
             NET_TYPE = sym.NetworkType.MAIN_NET;
@@ -247,7 +247,7 @@ async function searchAddress(_RawAddress){
             console.log("test");
 
             GENERATION_HASH = '7FCCD304802016BEBBCD342A332F91FF1F3BB5E902988B352697BE245F48E836';
-            EPOCH = 1637848847;
+            //EPOCH = 1637848847;
             XYM_ID = '3A8416DB2D53B6C8';
             NODE_URL = 'https://sym-test-04.opening-line.jp:3001';
             NET_TYPE = sym.NetworkType.TEST_NET; 
@@ -258,6 +258,7 @@ async function searchAddress(_RawAddress){
     }
 
     repo = new sym.RepositoryFactoryHttp(NODE_URL);
+    EPOCH = await repo.getEpochAdjustment().toPromise();
     accountRepo = repo.createAccountRepository();
     txRepo = repo.createTransactionRepository();
     
