@@ -236,7 +236,7 @@ async function searchAddress(_RawAddress){
 
             //GENERATION_HASH = 'ED5761EA890A096C50D3F50B7C2F0CCB4B84AFC9EA870F381E84DDE36D04EF16'
             GENERATION_HASH = '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6';
-            EPOCH = 1615853185;
+            //EPOCH = 1615853185;
             XYM_ID = '6BED913FA20223F8';
             NODE_URL = 'https://symbol-mikun.net:3001';
             //XYM_ID = '39E0C49FA322A459';
@@ -261,7 +261,7 @@ async function searchAddress(_RawAddress){
     }
 
     repo = new sym.RepositoryFactoryHttp(NODE_URL);
-    //EPOCH = await sym.RepositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
+    EPOCH = await sym.RepositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
     accountRepo = repo.createAccountRepository();
     txRepo = repo.createTransactionRepository();
     
