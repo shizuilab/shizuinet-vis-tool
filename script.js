@@ -1,4 +1,4 @@
-const sym = require('/node_modules/symbol-sdk@2.0.1');
+const sym = require('/node_modules/symbol-sdk');
 
 let GENERATION_HASH;
 let EPOCH;
