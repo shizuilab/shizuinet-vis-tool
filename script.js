@@ -240,7 +240,7 @@ async function searchAddress(_RawAddress){
             NODE_URL = 'http://dhealth.shizuilab.com:3000';
             NET_TYPE = sym.NetworkType.MAIN_NET;
 
-            document.getElementById('explorer').innerHTML= '<a href="https://symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
+            document.getElementById('explorer').innerHTML= '<a href="http://explorer.dhealth.cloud/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
             break;
 
         case "T":
