@@ -237,7 +237,7 @@ async function searchAddress(_RawAddress){
             GENERATION_HASH = '57F7DA205008026C776CB6AED843393F04CD458E0AA2D9F1D5F31A402072B2D6';
             EPOCH = 1615853185;
             XYM_ID = '6BED913FA20223F8';
-            NODE_URL = 'http://shizuinet.tplinkdns.com:3000';
+            NODE_URL = 'https://symbol-mikun.net:3001';
             NET_TYPE = sym.NetworkType.MAIN_NET;
 
             document.getElementById('explorer').innerHTML= '<a href="https://symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
