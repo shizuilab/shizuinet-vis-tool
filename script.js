@@ -235,7 +235,7 @@ async function searchAddress(_RawAddress){
             console.log("main");
 
             GENERATION_HASH = 'ED5761EA890A096C50D3F50B7C2F0CCB4B84AFC9EA870F381E84DDE36D04EF16';
-            EPOCH = await repositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
+            
             XYM_ID = '75706ADB11C869EE';
             NODE_URL = 'http://dhealth.shizuilab.com:3000';
             NET_TYPE = sym.NetworkType.MAIN_NET;
@@ -258,6 +258,7 @@ async function searchAddress(_RawAddress){
     }
 
     repo = new sym.RepositoryFactoryHttp(NODE_URL);
+    EPOCH = await sym.RepositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
     accountRepo = repo.createAccountRepository();
     txRepo = repo.createTransactionRepository();
     
