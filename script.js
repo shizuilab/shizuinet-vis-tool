@@ -244,7 +244,7 @@ async function searchAddress(_RawAddress){
             NET_TYPE = sym.NetworkType.MAIN_NET;
 
             //document.getElementById('explorer').innerHTML= '<a href="https://symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
-            document.getElementById('explorer').innerHTML= '<a href="http://explorer.dhealth.cloud/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
+            document.getElementById('explorer').innerHTML= '<a href="http://explorer.dhealth.cloud/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on dHealth Explorer</a>';
             break;
 
         case "T":
@@ -256,7 +256,7 @@ async function searchAddress(_RawAddress){
             NODE_URL = 'https://sym-test-04.opening-line.jp:3001';
             NET_TYPE = sym.NetworkType.TEST_NET; 
 
-            document.getElementById('explorer').innerHTML= '<a href="https://testnet.symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Symbol Explorer</a>';
+            document.getElementById('explorer').innerHTML= '<a href="https://testnet.symbol.fyi/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on Testnet Explorer</a>';
             break;
 
     }
