@@ -229,14 +229,13 @@ async function searchAddress(_RawAddress){
     nodesArray.splice(0);
     
     // console.log(RawAddress);
-
-    EPOCH = await repositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
 	
     switch(RawAddress.substr(0,1)){
         case "N":
             console.log("main");
 
             GENERATION_HASH = 'ED5761EA890A096C50D3F50B7C2F0CCB4B84AFC9EA870F381E84DDE36D04EF16';
+            EPOCH = await repositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
             XYM_ID = '75706ADB11C869EE';
             NODE_URL = 'http://dhealth.shizuilab.com:3000';
             NET_TYPE = sym.NetworkType.MAIN_NET;
