@@ -262,7 +262,7 @@ async function searchAddress(_RawAddress){
     }
 
     repo = new sym.RepositoryFactoryHttp(NODE_URL);
-    EPOCH = await sym.RepositoryFactory.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
+    EPOCH = await repo.getEpochAdjustment().toPromise(); //dhealth deadlineに必要
     accountRepo = repo.createAccountRepository();
     txRepo = repo.createTransactionRepository();
     
