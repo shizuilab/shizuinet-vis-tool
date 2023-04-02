@@ -237,7 +237,7 @@ async function searchAddress(_RawAddress){
             GENERATION_HASH = 'ED5761EA890A096C50D3F50B7C2F0CCB4B84AFC9EA870F381E84DDE36D04EF16';
             //EPOCH = 1615853185;
             XYM_ID = '39E0C49FA322A459';
-            NODE_URL = 'http://dhealth.shizuilab.com:3000';
+            NODE_URL = 'https://dhealth.shizuilab.com:3001';
             NET_TYPE = sym.NetworkType.MAIN_NET;
 
             document.getElementById('explorer').innerHTML= '<a href="http://explorer.dhealth.cloud/accounts/'+RawAddress+'" target="_blank">['+RawAddress+'] on dHealth Explorer</a>';
